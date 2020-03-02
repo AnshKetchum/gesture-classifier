@@ -21,7 +21,13 @@ def get_angle(a,b,c):
     dist_diff = (ac * ac) - (ab * ab) - (bc * bc)
     dist_diff = (dist_diff) / (-2.0 * ab * bc)
     print(dist_diff)
-    theta = math.degrees(np.acos(dist_diff))
+
+    if dist_diff < -1:
+        dist_diff = -1
+    elif dist_diff > 1:
+        dist_diff = 1
+
+    theta = math.degrees(math.acos(dist_diff))
 
     print(theta)
     return theta
