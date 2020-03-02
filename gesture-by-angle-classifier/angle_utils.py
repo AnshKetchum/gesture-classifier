@@ -27,8 +27,6 @@ def get_angle(a,b,c):
         dist_diff = 1
 
     theta = math.degrees(math.acos(dist_diff))
-
-    print(theta)
     return theta
 
 def get_angles(b):
