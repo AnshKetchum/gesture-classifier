@@ -53,7 +53,7 @@ pose_map={0:"Nose" ,1:"Neck",2:"RShoulder",3:"RElbow", 4:"RWrist",5:"LShoulder"
 def save_openpose_data(image,datum,imageName):
     out_dir="./similarity_output"
     if not os.path.exists(out_dir):
-        os.mkdir(out_dir)
+        os.mkdirs(out_dir)
     cv2.imwrite(str(os.path.join(out_dir,imageName))+".jpg",datum)
 
 
