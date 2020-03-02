@@ -20,7 +20,6 @@ def get_angle(a,b,c):
 
     dist_diff = (ac * ac) - (ab * ab) - (bc * bc)
     dist_diff = (dist_diff) / (-2.0 * ab * bc)
-    print(dist_diff)
 
     if dist_diff < -1:
         dist_diff = -1
@@ -35,7 +34,6 @@ def get_angle(a,b,c):
 def get_angles(b):
     angles = []
 
-    print(b)
     for i in range(1,24):
         angles.append(get_angle(b[i - 1], b[i], b[i + 1]))
     return angles
