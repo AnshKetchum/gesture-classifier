@@ -3,7 +3,7 @@
 """
 Created on Mon Mar  2 12:23:19 2020
 
-@author: sanath
+@author: sanath (Not Ansh, NOTE: I (Ansh) DO NOT TAKE CREDIT FOR THE CREATION OF THIS FILE)
 """
 
 #Shot similarity prediction using openpose API 

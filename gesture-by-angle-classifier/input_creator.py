@@ -1,10 +1,8 @@
 import numpy as np
 import os 
 from angle_utils import get_angles
+from openpose_data_for_single_image import get_single_image_data
 import cv2
-
-def infer_image(image):
-    return 
 
 #Creates the two files (train input / labels) that will be used
 def create_train_data():
@@ -18,8 +16,9 @@ def create_train_data():
 
     for label in os.listdir(input_dir):
         for image in os.listdir(input_dir + '/' + label + '/'):
+            path = input_dir + '/' + label + '/' + image
             outputs.append(label)
-            angle_list.append(get_angles(infer_image(cv2.imread(image) ) ) )
+            angle_list.append(get_angles(get_single_image_data(path)))
 
     angle_list = np.array(angle_list)
     np.save(output_fileAngles,angle_list)
