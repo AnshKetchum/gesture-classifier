@@ -1,4 +1,4 @@
-import numpy 
+import numpy as np
 import math
 
 
@@ -21,7 +21,7 @@ def get_angle(a,b,c):
     dist_diff = (ac * ac) - (ab * ab) - (bc * bc)
     dist_diff = (dist_diff) / (-2.0 * ab * bc)
     print(dist_diff)
-    theta = math.degrees(math.acos(dist_diff))
+    theta = math.degrees(np.acos(dist_diff))
 
     print(theta)
     return theta
