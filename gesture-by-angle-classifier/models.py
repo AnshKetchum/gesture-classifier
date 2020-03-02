@@ -2,6 +2,8 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.layers import Dense,Flatten
 from tensorflow.keras import Sequential
+from angle_utils import get_angles
+from openpose_data_for_single_image import get_single_image_data
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
@@ -32,8 +34,9 @@ class GestureAngleClassifier:
     def format_image(self, path, p):
         return np.array(cv2.imread(path + '/' + p,0))
 
-    def get_predictions(self, image_to_classify):
-        pred = np.array([image_to_classify])
+    def get_predictions(self, image_path):
+
+        pred = np.array([get_angles(get_single_image_data(image_path))])
         prediction = self.classifier.predict(pred)
         index = np.argmax(prediction[0])
         return [self.output_labels[index]  , prediction[0][index]]
