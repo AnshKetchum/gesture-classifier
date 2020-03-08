@@ -17,6 +17,7 @@ class GestureAngleClassifier:
 
     train_input = []
     train_labels = []
+    output_labels = []
     saved_file_name = 'weights2.h5'
     SIZE = 224
 
@@ -62,6 +63,7 @@ class GestureAngleClassifier:
 
         self.train_input = np.load(train_input_path)
         self.train_labels = np.load(train_labels_path)
+        self.output_labels = self.train_labels
 
         print('Data Loaded.')
         self.load_model()
