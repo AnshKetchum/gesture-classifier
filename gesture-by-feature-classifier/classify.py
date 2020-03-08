@@ -1,3 +1,9 @@
+'''
+Script to give output of classifier
+in a console-based fashion.
+'''
+
+
 import os
 from models import PureNNGestureClassifier
 import tensorflow as tf
@@ -6,11 +12,12 @@ from tensorflow.keras.layers import Dense,Flatten
 import numpy as np
 import cv2
 
-
+#Input Directory
 input_directory = './Dataset'
 inputs = []
 outputs = []
 
+#Loads input data from the input directory specified
 def load_data():
     print('----------------------')
     count = 0
@@ -22,11 +29,13 @@ def load_data():
     print('----------------------')
 
 
+#Reads/Resizes the image
 def read_image(path,SIZE):
     img = cv2.imread(path)
     resized = cv2.resize(img, (SIZE,SIZE), interpolation = cv2.INTER_AREA)
     return resized
 
+#Tests the classifier 
 def classify_shot_percentages(frame_directory, THRESHOLD_FOR_CLASSIFICATION, SIZE):
     classifier = PureNNGestureClassifier(inputs,outputs)
     i = 1
@@ -72,8 +81,7 @@ def classify_shot_percentages(frame_directory, THRESHOLD_FOR_CLASSIFICATION, SIZ
     print(actions)
     print('------------------------')
 
-#Only run this if you need to retrain
-load_data() 
+#Only run line below if you need to retrain
+#load_data() 
 
 classify_shot_percentages('./shot2', 0.5,224)
-#classifier = PureNNGestureClassifier([input_directory + '/Forhand'])

@@ -1,3 +1,8 @@
+'''
+Utility class to manage dataset
+
+'''
+
 import cv2
 import imutils
 import os
@@ -5,36 +10,6 @@ from PIL import Image
 import imageio
 import numpy as np
 
-'''
-class VideoHandler:
-    vc = None
-    
-    def __init__(self, input_video_path):
-        self.vc = cv2.VideoCapture(input_video_path)
-
-    def rotate_90_degrees(frame):
-        return imutils.rotate_bound(frame,90)
-
-    def create_output_frame(frame,output_directory):
-        cv2.imwrite(output_directory,frame)
-
-    def video_to_images(output_directory,tag_name,image_extension):
-        count = 1 
-        success = 1
-        
-        if not(output_directory.endswith('/')):
-            output_directory += '/'
-
-        while success:
-            success, frame = vc.read()
-            frame = rotate_90_degrees(frame)
-            
-            out_dir = output_directory + tag_name + '-' + str(count) + image_extension
-            create_output_frame(frame, out_dir)
-            count += 1
-
-        vc.release()
-'''
 
 class DatasetManager:
 

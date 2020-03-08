@@ -1,9 +1,13 @@
+'''
+Scripts that takes the UnsortedDataset folder as input
+and generates a Dataset folder that can be used as a 
+dataset for training.
+'''
 
 import os
 from utils import DatasetManager
 
 datasetHandler = DatasetManager()
-
 input_directory = './UnsortedDataset'
 output_directory = './Dataset'
 
