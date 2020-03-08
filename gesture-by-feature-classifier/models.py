@@ -11,6 +11,7 @@ from PIL import Image
 
 class PureNNGestureClassifier:
 
+    #This needs to be updated based on the labels.
     output_labels = ['Forehand', 'Backhand']
 
     train_input = []

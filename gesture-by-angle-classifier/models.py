@@ -13,6 +13,7 @@ from PIL import Image
 
 class GestureAngleClassifier:
 
+    #This need to be updated based on data output labels
     output_labels = ['Backhand', 'Forehand']
     train_input = []
     train_labels = []
