@@ -19,11 +19,11 @@ class GestureAngleClassifier:
     train_labels = []
     output_labels = []
     saved_file_name = 'weights2.h5'
-    SIZE = 224
+    SIZE = 23
 
 
     classifier = Sequential([
-            Flatten(input_shape = (1,23)) ,
+            Flatten(input_shape = (SIZE)) ,
             Dense(128, activation='relu')   ,
             Dense(len(output_labels), activation='softmax')
         ])
