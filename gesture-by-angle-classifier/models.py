@@ -38,6 +38,7 @@ class GestureAngleClassifier:
         pred = np.array([get_angles(get_single_image_data(image_path))])
         prediction = self.classifier.predict(pred)
         index = np.argmax(prediction[0])
+        print(index)
         return [self.output_labels[index]  , prediction[0][index]]
 
     def train_model(self):
