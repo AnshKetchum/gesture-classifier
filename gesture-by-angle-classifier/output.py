@@ -6,7 +6,7 @@ from models import GestureAngleClassifier
 
 def display_image(path, pred):
     plt.imshow(mimg.imread(path))
-    plt.text(0,0,'Classification: ' + pred[0] + ' and similarity: ' + pred[1])
+    plt.text(0,0,'Classification: ' + pred[0] + ' and similarity: ' + str(pred[1]))
     plt.pause(0.5)
     plt.show()
 
