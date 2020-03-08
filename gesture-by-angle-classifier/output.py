@@ -16,6 +16,6 @@ def display(input_folder):
         pred = model.get_predictions(input_folder + '/' + path)
         pred = pred[0]
 
-        display_image('./similarity_output/openpose-result.jpg', pred)
+        display_image('similarity_output/openpose-result.jpg', pred)
 
 display('./shot2')
