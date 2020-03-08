@@ -5,6 +5,7 @@ import cv2
 from models import GestureAngleClassifier
 
 def display_image(path, pred):
+    plt.clf()
     plt.imshow(mimg.imread(path))
     plt.text(0,0,pred[0] + ' Similarity: ' + str(pred[1]))
     plt.pause(0.1)
