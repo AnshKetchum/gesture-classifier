@@ -14,10 +14,8 @@ from PIL import Image
 class GestureAngleClassifier:
 
     output_labels = ['Forehand', 'Backhand']
-
     train_input = []
     train_labels = []
-    output_labels = []
     saved_file_name = 'weights2.h5'
     SIZE = 23
 
