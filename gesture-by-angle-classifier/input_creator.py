@@ -14,11 +14,13 @@ def create_train_data():
     angle_list = []
     outputs = []
 
+    i = 0
     for label in os.listdir(input_dir):
         for image in os.listdir(input_dir + '/' + label + '/'):
             path = input_dir + '/' + label + '/' + image
-            outputs.append(label)
+            outputs.append(i)
             angle_list.append(get_angles(get_single_image_data(path)))
+        i += 1
 
     angle_list = np.array(angle_list)
     np.save(output_fileAngles,angle_list)
