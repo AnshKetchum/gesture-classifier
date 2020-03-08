@@ -65,7 +65,6 @@ class PureNNGestureClassifier:
 
     def load_model(self):
 
-            #Remember to add 'not' here   
         if not path.exists(self.saved_file_name):
             print('File not found, Creating weights.h5 file')
             print(self.train_input.shape)
