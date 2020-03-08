@@ -21,7 +21,7 @@ class PureNNGestureClassifier:
 
 
     classifier = Sequential([
-            Flatten(input_shape = (SIZE, 23)) ,
+            Flatten(input_shape = (SIZE, SIZE,3)) ,
             Dense(128, activation='relu')   ,
             Dense(len(output_labels), activation='softmax')
         ])

@@ -23,7 +23,7 @@ class GestureAngleClassifier:
 
 
     classifier = Sequential([
-            Flatten(input_shape = (SIZE, SIZE,3)) ,
+            Flatten(input_shape = (SIZE,23)) ,
             Dense(128, activation='relu')   ,
             Dense(len(output_labels), activation='softmax')
         ])
