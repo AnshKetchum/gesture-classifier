@@ -52,6 +52,7 @@ class GestureAngleClassifier:
         if not path.exists(self.saved_file_name):
             print('File not found, Creating ' + self.saved_file_name + ' file')
             print(self.train_input.shape)
+            print(self.train_labels.shape)
             self.train_model()
             self.classifier.save_weights(self.saved_file_name)
 
