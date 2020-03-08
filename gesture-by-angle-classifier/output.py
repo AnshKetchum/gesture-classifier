@@ -13,7 +13,9 @@ def display_image(path, pred):
 
 
 def display(input_folder):
+    SIZE = 20
     model = GestureAngleClassifier('train_angles.npy', 'train_labels.npy')
+    plt.rcParams["figure.figsize"] = (SIZE,SIZE)
     plt.show()
 
     for path in os.listdir(input_folder):
