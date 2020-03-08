@@ -17,4 +17,5 @@ def display(input_folder):
         pred = pred[0]
 
         display_image('./similarity_output/openpose-result.jpg', pred)
- 
+
+display('./shot2')
